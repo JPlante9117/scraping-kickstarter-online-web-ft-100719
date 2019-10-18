@@ -11,7 +11,12 @@ def create_project_hash
   
   project_html.each do |project|
     title = project_html.css("h2.bbcard_name strong a").text
-    projects[project] = {}
+    projects[title.to_sym] = {
+      image_link: ,
+      description: ,
+      location: ,
+      percent_funded: ,
+    }
   end
   binding.pry
 end
